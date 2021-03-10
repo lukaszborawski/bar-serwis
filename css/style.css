@@ -5,11 +5,74 @@
           box-sizing: border-box;
 }
 
-header {
-  height: 100vh;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.header {
+  height: 15vh;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2px 5px;
+  color: white;
+  background-color: black;
+  text-transform: uppercase;
+  font-family: 'Anton', sans-serif;
+}
+
+.logo_title {
+  font-size: 35px;
+}
+
+.logo_title-color {
+  color: #5ce1e6;
+}
+
+.logo_subtitle {
+  font-size: 15px;
+}
+
+.menu_button {
+  color: white;
+}
+
+.menu_list {
+  display: none;
+}
+
+.main-banner {
+  height: 90vh;
   background-image: url(/img/1.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+}
+
+.about {
+  height: 100vh;
 }
 /*# sourceMappingURL=style.css.map */
