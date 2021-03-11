@@ -1,6 +1,9 @@
 .header {
     height: 15vh;
-    background-color: black;
+    position: fixed;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
     display: flex;
     justify-content: space-around;
     align-items: center;
