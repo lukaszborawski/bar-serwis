@@ -18,19 +18,21 @@
 
 <body>
     <header class="header">
-        <section class="logo">
-            <h1 class="logo_title">bar <span class="logo_title-color">serwis</span></h1>
-            <span class="logo_subtitle">usługi barmańskie i baristyczne</span>
-        </section>
-        <nav class="menu">
-            <div class="menu_button"><i class="fas fa-bars"></i></div>
-            <ul class="menu_list">
-                <li class="menu_item"><a class="menu_link" href="">główna</a></li>
-                <li class="menu_item"><a class="menu_link" href="">o nas</a></li>
-                <li class="menu_item"><a class="menu_link" href="">oferta</a></li>
-                <li class="menu_item"><a class="menu_link" href=""></a>kontakt</li>
-            </ul>
-        </nav>
+        <div class="header_inner">
+            <section class="logo">
+                <h1 class="logo_title">bar <span class="logo_title-color">serwis</span></h1>
+                <span class="logo_subtitle">usługi barmańskie i baristyczne</span>
+            </section>
+            <nav class="menu">
+                <div class="menu_button"><i class="fas fa-bars"></i></div>
+                <ul class="menu_list">
+                    <li class="menu_item"><a class="menu_link" href="">główna</a></li>
+                    <li class="menu_item"><a class="menu_link" href="">o nas</a></li>
+                    <li class="menu_item"><a class="menu_link" href="">oferta</a></li>
+                    <li class="menu_item"><a class="menu_link" href="">kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
     <section class="main-banner"></section>
     <div class="container">
@@ -77,12 +79,36 @@
             <li class="gallery_item">
                 <img class="gallery_img" src="/img/5.jpg" alt="">
             </li>
-            <!-- <li class="gallery_item">
-                <img class="gallery_img" src="/img/6.jpg" alt="">
-            </li> -->
     </section>
     <div class="container">
-        <section class="contact"></section>
+        <section class="contact">
+            <h2 class="contact_header">kontakt</h2>
+            <div class="contact_wrapper">
+                <div class="wrapper_media">
+                    <a class="contact_link" href="mailto:kontakt@bar-serwis.pl"><i
+                            class="contact_link-icon far fa-envelope"></i>kontakt@bar-serwis.pl</a>
+                    <a class="contact_link" href="tel:607 840 640"><i class="contact_link-icon fas fa-phone"></i>607 840
+                        640</a>
+                    <div class="contact_social">
+                        <a class="contact_link" href="https://www.youtube.com/channel/UCm2sjE4IkiyhOyimDkcuNJw"><i
+                                class="contact_social-icon fab fa-youtube-square"></i></a>
+                        <a class="contact_link" href="https://www.facebook.com/BarSerwis/"><i
+                                class="contact_social-icon fab fa-facebook-square"></i></a>
+                    </div>
+                </div>
+                <div class="wrapper_form">
+                    <form class="contact_form">
+                        <label class="contact_label" for="name">Imię</label>
+                        <input class="contact_input" id="name" type="text" name="name" required>
+                        <label class="contact_label" for="email">E-mail</label>
+                        <input class="contact_input" id="email" type="email" name="email" required>
+                        <label class="contact_label" for="message">Wiadomość</label>
+                        <textarea class="contact_textarea" id="message" name="content" cols="40" rows="8"></textarea>
+                        <button class="contact_button" type="submit">Wyślij</button>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
     <footer class="footer"><span class="footer_text">© bar-serwis</span></footer>
 
