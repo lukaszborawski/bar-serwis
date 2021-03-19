@@ -175,7 +175,6 @@ body {
   background: url("/img/1.jpg");
   background-size: cover;
   background-position: top;
-  background-attachment: fixed;
 }
 
 .about-us {
