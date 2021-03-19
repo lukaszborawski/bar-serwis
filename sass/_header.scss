@@ -3,7 +3,7 @@
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .header_inner {
@@ -25,6 +25,7 @@
     background-color: black;
     text-transform: uppercase;
     font-family: 'Anton', sans-serif;
+    z-index: 3;
 }
 
 .logo_title {
@@ -40,7 +41,12 @@
 }
 
 .menu_button {
+    position: fixed;
+    top: 40px;
+    right: 35px;
+    cursor: pointer;
     color: white;
+    z-index: 3;
 }
 
 @media (min-width: 992px) {
@@ -49,30 +55,46 @@
     }
 }
 .menu_list {
-    display: none;
-}
-
-.menu_list--open {
-    display: block;
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: black
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    transform: translateY(-100%);
+    z-index: 2;
+}
+
+.menu_list--open {
+    opacity: 1;
+    pointer-events: unset;
+    transform: translateX(0)
+    
 }
 
 @media (min-width: 992px) {
     .menu_list {
-        display: flex;
-        justify-content: center;
-        list-style: none;
+        opacity: 1;
+        pointer-events: unset;
+        transform: translateX(0);
+        position: unset;
+        flex-direction: row;
+        background-color: transparent;
+        
     }
 }
 
-// .menu_item {
-//     text-decoration: none;
-// }
+.menu_item {
+    margin: 20px;
+}
 
 @media (min-width:992px) {
     .menu_item {
@@ -81,9 +103,11 @@
 }
 
 .menu_link {
+    font-size: 18px;
+    font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-    padding: 5px;
+    padding: 10px;
     color: white;
     transition: background-color 0.4s;
     &:hover {

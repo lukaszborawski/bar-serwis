@@ -1,10 +1,21 @@
 .gallery {
     padding-top: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .gallery_list {
     list-style: none;
     display: flex;
+}
+
+.gallery_item:nth-last-child(1) {
+    display: none;
+}
+@media (min-width: 992px) {
+    .gallery_item:nth-last-child(1){
+        display: unset;
+    }
 }
 
 .gallery_img {
