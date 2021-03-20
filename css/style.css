@@ -172,9 +172,10 @@ body {
 
 .main-banner {
   height: 100vh;
-  background: url("/img/1.jpg");
+  background-image: url("../img/1.jpg");
   background-size: cover;
   background-position: top;
+  background-attachment: fixed;
 }
 
 .about-us {
@@ -187,8 +188,8 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding-top: 140px;
-  margin-top: -100px;
+  padding-top: 60px;
+  scroll-margin-top: 50px;
 }
 
 .about-us_header {
@@ -214,8 +215,8 @@ body {
 }
 
 .offer {
-  padding-top: 140px;
-  margin-top: -100px;
+  padding-top: 60px;
+  scroll-margin-top: 50px;
 }
 
 .offer_header {
@@ -285,8 +286,8 @@ body {
 }
 
 .contact {
-  padding-top: 140px;
-  margin-top: -100px;
+  padding-top: 60px;
+  scroll-margin-top: 50px;
 }
 
 .contact_header {
