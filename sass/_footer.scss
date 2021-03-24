@@ -1,9 +1,9 @@
 .footer {
     text-align: center;
-    background-color: black;
+    background-color: $bg-color;
     padding: 20px 0;
 }
 
-.footer_text {
-    color: white
+.footer__text {
+    color: white;
 }

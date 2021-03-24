@@ -1,8 +1,8 @@
-const burger = document.querySelector(".menu_button");
-const menu = document.querySelector(".menu_list");
+const burger = document.querySelector(".menu__button");
+const menu = document.querySelector(".menu__list");
 
 const handleClick = () => {
-    menu.classList.toggle("menu_list--open");
+    menu.classList.toggle("menu__list--open");
 }
 
 burger.addEventListener("click", handleClick);

@@ -1,29 +1,24 @@
 .about-us {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-top: 60px;
-    scroll-margin-top: 50px;
+    @include flexSettings;
+    @include sectionTop;
 }
 
-.about-us_header {
-    text-transform: uppercase;
-    font-size: 30px;
+.about-us__header {
+    @include sectionTitleSize ;
 }
 
-.about-us_paragraph {
+.about-us__paragraph {
     margin-top: 10px;
     text-align: justify;
 }
 
-.about-us_img {
+.about-us__img {
     display: none;
-}
-
-@media (min-width: 992px) {
-    .about-us_img {
-        display: block;
-        width: 80%;
-        margin-left: 30px;
-    }
+    @media (min-width: 992px) {
+            display: block;
+            width: 100%;
+            max-width: 350px;
+            margin-left: 30px;
+            overflow: hidden;
+        }
 }

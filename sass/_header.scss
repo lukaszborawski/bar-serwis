@@ -6,104 +6,85 @@
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.header_inner {
+.header__inner {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flexSettings(space-between);
 }
 
 .logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 4px 6px;
     margin: 12px 0;
     color: white;
-    background-color: black;
+    background-color: $bg-color;
     text-transform: uppercase;
     font-family: 'Anton', sans-serif;
     z-index: 3;
 }
 
-.logo_title {
+.logo__title {
     font-size: 35px;
 }
 
-.logo_title-color {
-    color: #5ce1e6;
+.logo__title-color {
+    color: $special-color;
 }
 
-.logo_subtitle {
-    font-size: 15px;
+.logo__subtitle {
+    font-size: 16px;
 }
 
-
-.menu_button {
-    position: fixed;
-    top: 40px;
-    right: 35px;
+.menu__button {
+    position: relative;
     cursor: pointer;
     color: white;
     z-index: 3;
-}
-
-@media (min-width: 992px) {
-    .menu_button {
-        display: none;
+    @media (min-width: 992px) {
+            display: none; 
     }
 }
-.menu_list {
+.menu__list {
     position: fixed;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: black;
-    display: flex;
+    background-color: $bg-color;
+    @include flexSettings;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     list-style: none;
     opacity: 0;
     pointer-events: none;
     transition: 0.4s;
     transform: translateY(-100%);
     z-index: 2;
-}
-
-.menu_list--open {
-    opacity: 1;
-    pointer-events: unset;
-    transform: translateX(0)
-    
-}
-
-@media (min-width: 992px) {
-    .menu_list {
+    @media (min-width: 992px) {
+            opacity: 1;
+            pointer-events: unset;
+            transform: translateX(0);
+            position: unset;
+            flex-direction: row;
+            background-color: transparent;  
+    }
+    &--open {
         opacity: 1;
         pointer-events: unset;
-        transform: translateX(0);
-        position: unset;
-        flex-direction: row;
-        background-color: transparent;
+        transform: translateX(0)
         
     }
 }
 
-.menu_item {
-    margin: 20px;
-}
-
-@media (min-width:992px) {
-    .menu_item {
-    margin: 0 20px;
+.menu__item {
+    margin: 20px 0;
+    @media (min-width: 992px) {
+        margin: 0 20px;
     }
 }
 
-.menu_link {
+.menu__link {
     font-size: 18px;
     font-weight: bold;
     text-decoration: none;

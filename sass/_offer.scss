@@ -1,37 +1,30 @@
 .offer {
-    padding-top: 60px;
-    scroll-margin-top: 50px;
-    
+    @include sectionTop;
 }
 
-.offer_header {
-    text-transform: uppercase;
-    font-size: 30px;
+.offer__header {
+    @include sectionTitleSize ;
 }
 
-.offer_list {
+.offer__list {
     margin: 10px 0;
     list-style-position: inside;
     display: flex;
     flex-wrap: wrap;
 }
 
-.offer_item {
+.offer__item {
     flex-basis: 100%;
-    line-height: 1.9;
+    line-height: 1.8;
+    @media (min-width: 577px) {
+            flex-basis: 50%;
+    }
+    @media (min-width: 767px) {
+            flex-basis: 33.3%;
+    }
+    &::marker {
+        color: yellow;
+        }
 }
 
-@media (min-width: 577px) {
-    .offer_item {
-        flex-basis: 50%;
-    }
-}
-@media (min-width: 767px) {
-    .offer_item {
-        flex-basis: 33.3%;
-    }
-}
 
-.offer_item::marker {
-color: yellow;
-}
